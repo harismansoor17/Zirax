@@ -1,0 +1,51 @@
+const products = [
+    {
+        id: 1,
+        rank: 'feature',
+        image: 'img/jpg 1.jpg',
+        brand: 'brand 1',
+        title: 'Shoe 1',
+        price: 120,
+    },
+    {
+        id: 2,
+        rank: 'new',
+        image: 'img/jpg 4.jpg',
+        brand: 'brand 4',
+        title: 'Shoe 4',
+        price: 120,
+    },
+    {
+        id: 3,
+        rank: 'new',
+        image: 'img/jpg 4.jpg',
+        brand: 'brand 4',
+        title: 'Shoe 4',
+        price: 200,
+    },
+    {
+        id: 4,
+        rank: 'feature',
+        image: 'img/jpg 2.jpg',
+        brand: 'brand 2',
+        title: 'Shoe 2',
+        price: 200,
+    },
+    {
+        id: 5,
+        rank: 'feature',
+        image: 'img/jpg 3.jpg',
+        brand: 'brand 3',
+        title: 'Shoe 3',
+        price: 100,
+    },
+    {
+        id: 6,
+        rank: 'feature',
+        image: 'img/jpg 4.jpg',
+        brand: 'brand 4',
+        title: 'Shoe 4',
+        price: 140,
+    },
+];
+

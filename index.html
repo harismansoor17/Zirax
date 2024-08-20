@@ -29,7 +29,7 @@
   <body class="font-customFont">
     <!-- #8179b5 #fc9d17 -->
     <header>
-      <nav class="border-b-2 flex justify-between sticky items-center">
+      <nav class="border-b-2 flex justify-between items-center relative z-10">
         <div class="">
           <img class="p-2 w-36 cursor-pointer" src="img/logo.png" alt="" />
         </div>
@@ -50,9 +50,46 @@
           <li
             class="m-2 p-2 text-4xl hover:text-blue-700 hover:scale-110 transition ease-in-out delay-150"
           >
-            <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
+            <button onclick="showCart()" class="relative cursor-pointer">
+              <i class="fa-solid fa-bag-shopping"></i>
+              <p
+                class="text-base absolute top-0 -right-3 text-white bg-blue-700 rounded-full px-2"
+              >
+                0
+              </p>
+            </button>
           </li>
         </ul>
+        <!-- Cart  -->
+        <div
+          id="cartNav"
+          class="bg-blue-700 fixed top-0 -right-[400px] w-[400px] h-screen cursor-default transition-all duration-300 delay-150 z-10"
+        >
+          <div class="text-center text-white m-2 relative border-b-2">
+            <div class="font-extrabold text-3xl">Cart</div>
+            <button
+              onclick="hideCart()"
+              class="absolute top-0 right-0 text-3xl hover:scale-110 transition duration-150 delay-150"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+          <div id="cartItems">
+
+          </div>
+          
+          <div
+            class="grid grid-rows-2 text-white text-3xl font-bold absolute bottom-0 p-4 border-t-2"
+          >
+            <span>Total: </span>
+            <span id="total">0 $</span>
+            <button
+              class="row-span-2 border-2 p-3 rounded-3xl hover:bg-white hover:text-blue-700 hover:scale-110 transition-all duration-500 ease-[cubic-bezier(.05,.86,.75,.13)]"
+            >
+              Check Out
+            </button>
+          </div>
+        </div>
       </nav>
       <nav class="border-b-2">
         <ul class="flex items-center">
@@ -78,7 +115,7 @@
     <main>
       <section class="relative w-full h-screen overflow-hidden">
         <div class="absolute inset-0 m-4 -z-10">
-          <p class="text-red-700 text-3xl font-bold m-0 ">Zirax</p>
+          <p class="text-red-700 text-3xl font-bold m-0">Zirax</p>
           <span class="text-blue-700 text-9xl font-bold">
             Hit The Ground Running...
           </span>
@@ -169,330 +206,326 @@
         </div>
       </section>
       <section class="my-12 mx-4">
-        <div class="text-6xl text-blue-700 font-extrabold text-center m-8 cursor-default">
+        <div
+          class="text-6xl text-blue-700 font-extrabold text-center m-8 cursor-default"
+        >
           <span>Featured Products</span>
         </div>
-        <div class="grid grid-cols-4 gap-4  text-white">
-          <div class="rounded-3xl p-4 bg-blue-500 cursor-default transition-all delay-150 duration-300 shadow-2xl hover:shadow-none">
-            <div class="overflow-hidden rounded-3xl">
-              <img src="img/jpg 1.jpg" alt="" />
-            </div>
-            <br>
-            <br>
-            <div class="grid grid-cols-1 relative ">
-              <span class=" font-bold">Brand Name</span>
-              <span class="font-semibold ">Product Name</span>
-              <div class="text-yellow-400">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <span class="font-bold ">9.99$</span>
-              <div class="absolute right-0 text-2xl bottom-0 border-2 text-white rounded-full border-white p-2 hover:text-blue-500 hover:bg-white transition-all duration-300 delay-150 cursor-pointer">
-                <i class="fa-solid fa-cart-plus"></i>
-              </div>
-            </div>
-          </div>
-          <div class="rounded-3xl p-4 bg-blue-500 cursor-default transition-all delay-150 duration-300 shadow-2xl hover:shadow-none">
-            <div class="overflow-hidden rounded-3xl">
-              <img src="img/jpg 2.jpg" alt="" />
-            </div>
-            <br>
-            <br>
-            <div class="grid grid-cols-1 relative ">
-              <span class=" font-bold">Brand Name</span>
-              <span class="font-semibold ">Product Name</span>
-              <div class="text-yellow-400">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <span class="font-bold ">9.99$</span>
-              <div class="absolute right-0 text-2xl bottom-0 border-2 text-white rounded-full border-white p-2 hover:text-blue-500 hover:bg-white transition-all duration-300 delay-150 cursor-pointer">
-                <i class="fa-solid fa-cart-plus"></i>
-              </div>
-            </div>
-          </div><div class="rounded-3xl p-4 bg-blue-500 cursor-default transition-all delay-150 duration-300 shadow-2xl hover:shadow-none">
-            <div class="overflow-hidden rounded-3xl">
-              <img src="img/jpg 7.jpg" alt="" />
-            </div>
-            <br>
-            <br>
-            <div class="grid grid-cols-1 relative ">
-              <span class=" font-bold">Brand Name</span>
-              <span class="font-semibold ">Product Name</span>
-              <div class="text-yellow-400">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <span class="font-bold ">9.99$</span>
-              <div class="absolute right-0 text-2xl bottom-0 border-2 text-white rounded-full border-white p-2 hover:text-blue-500 hover:bg-white transition-all duration-300 delay-150 cursor-pointer">
-                <i class="fa-solid fa-cart-plus"></i>
-              </div>
-            </div>
-          </div><div class="rounded-3xl p-4 bg-blue-500 cursor-default transition-all delay-150 duration-300 shadow-2xl hover:shadow-none">
-            <div class="overflow-hidden rounded-3xl">
-              <img src="img/jpg 4.jpg" alt="" />
-            </div>
-            <br>
-            <br>
-            <div class="grid grid-cols-1 relative ">
-              <span class=" font-bold">Brand Name</span>
-              <span class="font-semibold ">Product Name</span>
-              <div class="text-yellow-400">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <span class="font-bold ">9.99$</span>
-              <div class="absolute right-0 text-2xl bottom-0 border-2 text-white rounded-full border-white p-2 hover:text-blue-500 hover:bg-white transition-all duration-300 delay-150 cursor-pointer">
-                <i class="fa-solid fa-cart-plus"></i>
-              </div>
-            </div>
-          </div>
+        <div id="featured" class="grid grid-cols-4 gap-4 text-white"></div>
       </section>
-      <section class="grid grid-cols-2 grid-rows-3 gap-4 mx-4" >
-        <div class="border-2 rounded-3xl p-20 cursor-default col-span-2 row-span-1" style="background-image:url(./img/jpg\ 1.jpg); background-repeat: no-repeat; background-size: cover;">
-            <div class="grid grid-cols-1">
+      <section class="grid grid-cols-2 grid-rows-3 gap-4 mx-4">
+        <div
+          class="border-2 rounded-3xl p-20 cursor-default col-span-2 row-span-1"
+          style="
+            background-image: url(./img/jpg\ 1.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
+          <div class="grid grid-cols-1">
             <span class="font-bold text-2xl text-white">Splash resistant</span>
-            <span class="font-semibold text-3xl text-blue-700">Best Kicks for Kids</span>
+            <span class="font-semibold text-3xl text-blue-700"
+              >Best Kicks for Kids</span
+            >
+          </div>
+          <button
+            class="bg-blue-700 p-4 rounded-3xl font-semibold text-white hover:bg-white hover:text-blue-700 transition-all duration-300 delay-150"
+          >
+            Shop by Category
+          </button>
         </div>
-            <button class="bg-blue-700 p-4 rounded-3xl font-semibold text-white hover:bg-white hover:text-blue-700 transition-all duration-300 delay-150">Shop by Category</button>
-        </div>
-        <div class="border-2 rounded-3xl p-20 cursor-default col-span-1 row-span-1 text-center" style="background-image:url(./img/jpg\ 7.jpg); background-repeat: no-repeat; background-size: cover;">
-            <div class="grid grid-cols-1">
+        <div
+          class="border-2 rounded-3xl p-20 cursor-default col-span-1 row-span-1 text-center"
+          style="
+            background-image: url(./img/jpg\ 7.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
+          <div class="grid grid-cols-1">
             <span class="font-bold text-2xl text-white">Splash resistant</span>
-            <span class="font-semibold text-3xl text-blue-700">Best Kicks for Kids</span>
+            <span class="font-semibold text-3xl text-blue-700"
+              >Best Kicks for Kids</span
+            >
+          </div>
+          <button
+            class="bg-blue-700 p-4 rounded-3xl font-semibold text-white hover:bg-white hover:text-blue-700 transition-all duration-300 delay-150"
+          >
+            Shop by Category
+          </button>
         </div>
-            <button class="bg-blue-700 p-4 rounded-3xl font-semibold text-white hover:bg-white hover:text-blue-700 transition-all duration-300 delay-150">Shop by Category</button>
-        </div>
-        <div class="border-2 rounded-3xl p-20 cursor-default col-span-1 row-span-1 text-center" style="background-image:url(./img/jpg\ 9.jpg); background-repeat: no-repeat; background-size: cover;">
-            <div class="grid grid-cols-1">
+        <div
+          class="border-2 rounded-3xl p-20 cursor-default col-span-1 row-span-1 text-center"
+          style="
+            background-image: url(./img/jpg\ 9.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
+          <div class="grid grid-cols-1">
             <span class="font-bold text-2xl text-white">Splash resistant</span>
-            <span class="font-semibold text-3xl text-blue-700">Best Kicks for Kids</span>
+            <span class="font-semibold text-3xl text-blue-700"
+              >Best Kicks for Kids</span
+            >
+          </div>
+          <button
+            class="bg-blue-700 p-4 rounded-3xl font-semibold text-white hover:bg-white hover:text-blue-700 transition-all duration-300 delay-150"
+          >
+            Shop by Category
+          </button>
         </div>
-            <button class="bg-blue-700 p-4 rounded-3xl font-semibold text-white hover:bg-white hover:text-blue-700 transition-all duration-300 delay-150">Shop by Category</button>
-        </div>
-        <div class="border-2 rounded-3xl p-20 cursor-default col-span-2" style="background-image:url(./img/jpg\ 5.jpg); background-repeat: no-repeat; background-size: cover ;">
-            <div class="grid grid-cols-1">
+        <div
+          class="border-2 rounded-3xl p-20 cursor-default col-span-2"
+          style="
+            background-image: url(./img/jpg\ 5.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+          "
+        >
+          <div class="grid grid-cols-1">
             <span class="font-bold text-2xl text-white">Splash resistant</span>
-            <span class="font-semibold text-3xl text-blue-700">Best Kicks for Kids</span>
+            <span class="font-semibold text-3xl text-blue-700"
+              >Best Kicks for Kids</span
+            >
+          </div>
+          <button
+            class="bg-blue-700 p-4 rounded-3xl font-semibold text-white hover:bg-white hover:text-blue-700 transition-all duration-300 delay-150"
+          >
+            Shop by Category
+          </button>
         </div>
-            <button class="bg-blue-700 p-4 rounded-3xl font-semibold text-white hover:bg-white hover:text-blue-700 transition-all duration-300 delay-150">Shop by Category</button>
-    </div>
-    </section>
-    <section class="my-12 mx-4">
-        <div class="text-6xl text-blue-700 font-extrabold text-center m-8 cursor-default">
+      </section>
+      <section class="my-12 mx-4">
+        <div
+          class="text-6xl text-blue-700 font-extrabold text-center m-8 cursor-default"
+        >
           <span>New Arivals</span>
         </div>
-        <div class="grid grid-cols-4 gap-4  text-white">
-          <div class="rounded-3xl p-4 bg-blue-500 cursor-default transition-all delay-150 duration-300 shadow-2xl hover:shadow-none">
-            <div class="overflow-hidden rounded-3xl">
-              <img src="img/jpg 1.jpg" alt="" />
-            </div>
-            <br>
-            <br>
-            <div class="grid grid-cols-1 relative ">
-              <span class=" font-bold">Brand Name</span>
-              <span class="font-semibold ">Product Name</span>
-              <div class="text-yellow-400">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <span class="font-bold ">9.99$</span>
-              <div class="absolute right-0 text-2xl bottom-0 border-2 text-white rounded-full border-white p-2 hover:text-blue-500 hover:bg-white transition-all duration-300 delay-150 cursor-pointer">
-                <i class="fa-solid fa-cart-plus"></i>
-              </div>
-            </div>
-          </div>
-          <div class="rounded-3xl p-4 bg-blue-500 cursor-default transition-all delay-150 duration-300 shadow-2xl hover:shadow-none">
-            <div class="overflow-hidden rounded-3xl">
-              <img src="img/jpg 2.jpg" alt="" />
-            </div>
-            <br>
-            <br>
-            <div class="grid grid-cols-1 relative ">
-              <span class=" font-bold">Brand Name</span>
-              <span class="font-semibold ">Product Name</span>
-              <div class="text-yellow-400">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <span class="font-bold ">9.99$</span>
-              <div class="absolute right-0 text-2xl bottom-0 border-2 text-white rounded-full border-white p-2 hover:text-blue-500 hover:bg-white transition-all duration-300 delay-150 cursor-pointer">
-                <i class="fa-solid fa-cart-plus"></i>
-              </div>
-            </div>
-          </div><div class="rounded-3xl p-4 bg-blue-500 cursor-default transition-all delay-150 duration-300 shadow-2xl hover:shadow-none">
-            <div class="overflow-hidden rounded-3xl">
-              <img src="img/jpg 7.jpg" alt="" />
-              <br>
-              <br>
-            </div>
-            <div class="grid grid-cols-1 relative ">
-              <span class=" font-bold">Brand Name</span>
-              <span class="font-semibold ">Product Name</span>
-              <div class="text-yellow-400">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <span class="font-bold ">9.99$</span>
-              <div class="absolute right-0 text-2xl bottom-0 border-2 text-white rounded-full border-white p-2 hover:text-blue-500 hover:bg-white transition-all duration-300 delay-150 cursor-pointer">
-                <i class="fa-solid fa-cart-plus"></i>
-              </div>
-            </div>
-          </div><div class="rounded-3xl p-4 bg-blue-500 cursor-default transition-all delay-150 duration-300 shadow-2xl hover:shadow-none">
-            <div class="overflow-hidden rounded-3xl">
-              <img src="img/jpg 4.jpg" alt="" />
-            </div>
-            <br>
-            <br>
-            <div class="grid grid-cols-1 relative ">
-              <span class=" font-bold">Brand Name</span>
-              <span class="font-semibold ">Product Name</span>
-              <div class="text-yellow-400">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <span class="font-bold ">9.99$</span>
-              <div class="absolute right-0 text-2xl bottom-0 border-2 text-white rounded-full border-white p-2 hover:text-blue-500 hover:bg-white transition-all duration-300 delay-150 cursor-pointer">
-                <i class="fa-solid fa-cart-plus"></i>
-              </div>
-            </div>
-          </div>
+        <div id="newArrivals" class="grid grid-cols-4 gap-4 text-white"></div>
       </section>
       <section class="grid grid-cols-3 gap-4 mx-4">
-        <div class="flex justify-center items-center flex-col text-center p-4 bg-blue-500 text-white rounded-2xl cursor-default">
-            <div class="w-16 overflow-hidden border-2 rounded-full">
-                <img class="object-contain" src="img/png 1.png" alt="">
-            </div>
-            <br> 
+        <div
+          class="flex justify-center items-center flex-col text-center p-4 bg-blue-500 text-white rounded-2xl cursor-default"
+        >
+          <div class="w-16 overflow-hidden border-2 rounded-full">
+            <img class="object-contain" src="img/png 1.png" alt="" />
+          </div>
+          <br />
 
-            <span class="font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptates dicta repudiandae distinctio delectus laborum consequatur velit ad inventore eveniet nemo odio, officiis ipsam reiciendis saepe eligendi error, sit cum?</span>
-            <br>
-            <br>
-            <div class="w-16 overflow-hidden border-2 rounded-full">
-                <img class="object-contain" src="img/profile 1.png" alt="">
-            </div>
-            <span class="font-semibold">Haris Mansoor</span>
-            <span>Position</span>
-            <div class="text-yellow-400">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
+          <span class="font-medium"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+            voluptates dicta repudiandae distinctio delectus laborum consequatur
+            velit ad inventore eveniet nemo odio, officiis ipsam reiciendis
+            saepe eligendi error, sit cum?</span
+          >
+          <br />
+          <br />
+          <div class="w-16 overflow-hidden border-2 rounded-full">
+            <img class="object-contain" src="img/profile 1.png" alt="" />
+          </div>
+          <span class="font-semibold">Haris Mansoor</span>
+          <span>Position</span>
+          <div class="text-yellow-400">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
         </div>
-        <div class="flex justify-center items-center flex-col text-center p-4 bg-blue-500 text-white rounded-2xl cursor-default">
-            <div class="w-16 overflow-hidden border-2 rounded-full">
-                <img class="object-contain" src="img/png 1.png" alt="">
-            </div>
-            <br> 
+        <div
+          class="flex justify-center items-center flex-col text-center p-4 bg-blue-500 text-white rounded-2xl cursor-default"
+        >
+          <div class="w-16 overflow-hidden border-2 rounded-full">
+            <img class="object-contain" src="img/png 1.png" alt="" />
+          </div>
+          <br />
 
-            <span class="font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptates dicta repudiandae distinctio delectus laborum consequatur velit ad inventore eveniet nemo odio, officiis ipsam reiciendis saepe eligendi error, sit cum?</span>
-            <br>
-            <br>
-            <div class="w-16 overflow-hidden border-2 rounded-full">
-                <img class="object-contain" src="img/profile 2.png" alt="">
-            </div>
-            <span class="font-semibold">Haris Mansoor</span>
-            <span>Position</span>
-            <div class="text-yellow-400">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
+          <span class="font-medium"
+            >Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+            voluptates dicta repudiandae distinctio delectus laborum consequatur
+            velit ad inventore eveniet nemo odio, officiis ipsam reiciendis
+            saepe eligendi error, sit cum?</span
+          >
+          <br />
+          <br />
+          <div class="w-16 overflow-hidden border-2 rounded-full">
+            <img class="object-contain" src="img/profile 2.png" alt="" />
+          </div>
+          <span class="font-semibold">Haris Mansoor</span>
+          <span>Position</span>
+          <div class="text-yellow-400">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
         </div>
-        <div class="flex justify-center items-center flex-col text-center p-4 bg-blue-500 text-white rounded-2xl cursor-default">
-            <div class="w-16 overflow-hidden border-2 rounded-full">
-                <img class="object-contain" src="img/png 1.png" alt="">
-            </div>
-            <br> 
+        <div
+          class="flex justify-center items-center flex-col text-center p-4 bg-blue-500 text-white rounded-2xl cursor-default"
+        >
+          <div class="w-16 overflow-hidden border-2 rounded-full">
+            <img class="object-contain" src="img/png 1.png" alt="" />
+          </div>
+          <br />
 
-            <p class="font-medium">Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat voluptates dicta repudiandae distinctio delectus laborum consequatur velit ad inventore eveniet nemo odio, officiis ipsam reiciendis saepe eligendi error, sit cum?</p>
-            <br>
-            <br>
-            <div class="w-16 overflow-hidden border-2 rounded-full">
-                <img class="object-contain" src="img/profile 3.png" alt="">
-            </div>
-            <span class="font-semibold">Haris Mansoor</span>
-            <span>Position</span>
-            <div class="text-yellow-400">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
+          <p class="font-medium">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+            voluptates dicta repudiandae distinctio delectus laborum consequatur
+            velit ad inventore eveniet nemo odio, officiis ipsam reiciendis
+            saepe eligendi error, sit cum?
+          </p>
+          <br />
+          <br />
+          <div class="w-16 overflow-hidden border-2 rounded-full">
+            <img class="object-contain" src="img/profile 3.png" alt="" />
+          </div>
+          <span class="font-semibold">Haris Mansoor</span>
+          <span>Position</span>
+          <div class="text-yellow-400">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
         </div>
       </section>
     </main>
-    <footer class="bg-blue-500 mt-4 text-white text-center p-6 grid grid-cols-4">
-        <div class="cursor-default">
-            <span class="font-extrabold text-3xl">About Us</span>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum asperiores consequatur ab voluptate, odio
-                et, possimus, nihil voluptates illum corrupti cumque dignissimos eum hic? Doloremque aliquid iste sed.
-            </p>
+    <footer
+      class="bg-blue-500 mt-4 text-white text-center p-6 grid grid-cols-4"
+    >
+      <div class="cursor-default">
+        <span class="font-extrabold text-3xl">About Us</span>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+          asperiores consequatur ab voluptate, odio et, possimus, nihil
+          voluptates illum corrupti cumque dignissimos eum hic? Doloremque
+          aliquid iste sed.
+        </p>
+      </div>
+      <div class="grid mx-4">
+        <ul>
+          <li>
+            <span class="text-2xl font-bold cursor-default">ZIRAX</span>
+          </li>
+          <li class="hover:scale-110 transition duration-150 delay-150">
+            <a href="index.html">Home</a>
+          </li>
+          <li class="hover:scale-110 transition duration-150 delay-150">
+            <a href="store.html">Store</a>
+          </li>
+          <li class="hover:scale-110 transition duration-150 delay-150">
+            <a href="contact.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-span-2 cursor-default">
+        <span class="font-bold text-2xl row-span-1">Payment Gateways</span>
+        <div class="flex justify-center items-center border-l-2 border-white">
+          <div class="w-16">
+            <img src="img/visa.png" alt="" />
+          </div>
+          <div class="w-16">
+            <img src="img/paypal.png" alt="" />
+          </div>
+          <div class="w-16">
+            <img src="img/mastercard.jpg" alt="" />
+          </div>
         </div>
-        <div class="grid mx-4">
-            <ul>
-                <li>
-                    <span class="text-2xl font-bold cursor-default">ZIRAX</span>
-                </li>
-                <li class="hover:scale-110 transition duration-150 delay-150">
-                    <a href="index.html">Home</a>
-                </li>
-                <li class="hover:scale-110 transition duration-150 delay-150">
-                    <a href="store.html">Store</a>
-                </li>
-                <li class="hover:scale-110 transition duration-150 delay-150">
-                    <a href="contact.html">Contact Us</a>                    
-                </li>
-            </ul>
-        </div>
-        <div class="col-span-2 cursor-default">
-            <span class="font-bold text-2xl row-span-1">Payment Gateways</span>
-            <div class="flex justify-center items-center">
-            <div class="w-16 ">
-                <img src="img/visa.png" alt="">
-            </div>
-            <div class="w-16">
-                <img src="img/paypal.png" alt="">                
-            </div>
-            <div class="w-16">
-                <img src="img/mastercard.jpg" alt="">
-            </div>
-        </div>
-        </div>
+      </div>
 
-        <div class="font-bold col-span-4 border-t-2 pt-4 cursor-default">
-            <p>&copy; 2024 Zirax | All Rights Reserved</p>
-        </div>
+      <div class="font-bold col-span-4 border-t-2 pt-4 cursor-default">
+        <p>&copy; 2024 Zirax | All Rights Reserved</p>
+      </div>
     </footer>
+    <script src="product.js"></script>
+    <script src="script.js"></script>
+    <script>
+      // CAROUSEl
+      const carousel = document.getElementById("carousel");
+      const totalItems = document.querySelectorAll(".carousel-item").length;
+      let index = 0;
+      let forward = true;
+
+      function showNextImage() {
+        if (forward) {
+          index++;
+          if (index === totalItems - 1) {
+            forward = false;
+          }
+        } else {
+          index--;
+          if (index === 0) {
+            forward = true;
+          }
+        }
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+      }
+
+      setInterval(showNextImage, 3000); // Change image every 3 seconds
+      //
+      // Product
+
+      let productDisplay = products.map((item) => {
+  var { id, image, rank, brand, title, price } = item;
+
+  // Handle 'feature' rank
+  if (rank === "feature") {
+    document.getElementById("featured").innerHTML += `
+      <div class="rounded-3xl p-4 bg-blue-500 cursor-default transition-all delay-150 duration-300 shadow-2xl hover:shadow-none">
+        <div class="overflow-hidden rounded-3xl">
+          <img src="${image}" alt="" />
+        </div>
+        <br><br>
+        <div class="grid grid-cols-1 relative z-0">
+          <span class="font-bold">${brand}</span>
+          <span class="font-semibold">${title}</span>
+          <div class="text-yellow-400">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <span class="font-bold">${price}</span>
+          <button onclick="addToCart(${id})" class="absolute right-0 text-2xl bottom-0 border-2 text-white rounded-full border-white p-2 hover:text-blue-500 hover:bg-white transition-all duration-300 delay-150 cursor-pointer">
+            <i class="fa-solid fa-cart-plus"></i>
+          </button>
+        </div>
+      </div>`;
+  }
+
+  // Handle 'new' rank
+  else if (rank === "new") {
+    document.getElementById("newArrivals").innerHTML += `
+      <div class="rounded-3xl p-4 bg-blue-500 cursor-default transition-all delay-150 duration-300 shadow-2xl hover:shadow-none">
+        <div class="overflow-hidden rounded-3xl">
+          <img src="${image}" alt="" />
+        </div>
+        <br><br>
+        <div class="grid grid-cols-1 relative z-0">
+          <span class="font-bold">${brand}</span>
+          <span class="font-semibold">${title}</span>
+          <div class="text-yellow-400">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <span class="font-bold">${price}</span>
+          <button onclick="addToCart(${id})" class="absolute right-0 text-2xl bottom-0 border-2 text-white rounded-full border-white p-2 hover:text-blue-500 hover:bg-white transition-all duration-300 delay-150 cursor-pointer">
+            <i class="fa-solid fa-cart-plus"></i>
+          </button>
+        </div>
+      </div>`;
+  }
+});
+
+      //
+    </script>
+    <script src="script.js"></script>
   </body>
-  <script src="script.js"></script>
 </html>
