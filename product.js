@@ -10,17 +10,17 @@ const products = [
     {
         id: 2,
         rank: 'new',
-        image: 'img/jpg 4.jpg',
-        brand: 'brand 4',
+        image: 'img/jpg 3.jpg',
+        brand: 'brand 2',
         title: 'Shoe 4',
         price: 120,
     },
     {
         id: 3,
         rank: 'new',
-        image: 'img/jpg 4.jpg',
-        brand: 'brand 4',
-        title: 'Shoe 4',
+        image: 'img/jpg 1.jpg',
+        brand: 'brand 40',
+        title: 'Shoe 1',
         price: 200,
     },
     {

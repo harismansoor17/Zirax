@@ -37,7 +37,7 @@
           <li
             class="m-2 p-2 text-lg hover:text-blue-500 hover:scale-110 transition ease-in-out delay-150"
           >
-            <a href=""
+            <a href="#"
               ><i class="fa-solid fa-user"></i
               ><span class="ml-1">Log In</span></a
             >
@@ -45,14 +45,14 @@
           <li
             class="m-2 p-2 text-lg hover:text-blue-700 hover:scale-110 transition ease-in-out delay-150"
           >
-            <a href="">Sign Up</a>
+            <a href="#">Sign Up</a>
           </li>
           <li
             class="m-2 p-2 text-4xl hover:text-blue-700 hover:scale-110 transition ease-in-out delay-150"
           >
             <button onclick="showCart()" class="relative cursor-pointer">
               <i class="fa-solid fa-bag-shopping"></i>
-              <p
+              <p id="itemsInCart"
                 class="text-base absolute top-0 -right-3 text-white bg-blue-700 rounded-full px-2"
               >
                 0
@@ -75,6 +75,7 @@
             </button>
           </div>
           <div id="cartItems">
+           
 
           </div>
           
@@ -82,7 +83,7 @@
             class="grid grid-rows-2 text-white text-3xl font-bold absolute bottom-0 p-4 border-t-2"
           >
             <span>Total: </span>
-            <span id="total">0 $</span>
+            <span id="cartTotal"></span>
             <button
               class="row-span-2 border-2 p-3 rounded-3xl hover:bg-white hover:text-blue-700 hover:scale-110 transition-all duration-500 ease-[cubic-bezier(.05,.86,.75,.13)]"
             >
@@ -96,7 +97,7 @@
           <li
             class="m-2 p-2 text-xl hover:text-blue-700 hover:scale-110 transition ease-in-out delay-150"
           >
-            <a href="">Home</a>
+            <a href="index.html">Home</a>
           </li>
           <li
             class="m-2 p-2 text-xl hover:text-blue-700 hover:scale-110 transition ease-in-out delay-150"
@@ -106,7 +107,7 @@
           <li
             class="m-2 p-2 text-xl hover:text-blue-700 hover:scale-110 transition ease-in-out delay-150"
           >
-            <a href="contact.html">Contact Us</a>
+            <a href="#">Contact Us</a>
           </li>
         </ul>
       </nav>
