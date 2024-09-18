@@ -19,15 +19,15 @@
   </head>
   <body class="font-poppins overflow-x-hidden w-screen">
     <header>
-      <nav class="border-b-2 flex justify-between sticky items-center z-10">
+      <nav class="border-b-2 flex justify-between items-center relative z-10">
         <div class="">
-          <img class="p-2 w-36 cursor-pointer" src="img/logo.png" alt="" />
+          <img class="p-2 w-36 cursor-pointer" src="./img/Logos/logo.webp" alt="" />
         </div>
         <ul class="flex items-center">
           <li
             class="m-2 p-2 text-lg hover:text-blue-500 hover:scale-110 transition ease-in-out delay-150"
           >
-            <a href=""
+            <a href="#"
               ><i class="fa-solid fa-user"></i
               ><span class="ml-1">Log In</span></a
             >
@@ -35,25 +35,25 @@
           <li
             class="m-2 p-2 text-lg hover:text-blue-700 hover:scale-110 transition ease-in-out delay-150"
           >
-            <a href="">Sign Up</a>
+            <a href="#">Sign Up</a>
           </li>
           <li
             class="m-2 p-2 text-4xl hover:text-blue-700 hover:scale-110 transition ease-in-out delay-150"
           >
             <button onclick="showCart()" class="relative cursor-pointer">
               <i class="fa-solid fa-bag-shopping"></i>
-              <span id="totalItems"
+              <p id="itemsInCart"
                 class="text-base absolute top-0 -right-3 text-white bg-blue-700 rounded-full px-2"
               >
-                
-              </span>
+                0
+              </p>
             </button>
           </li>
         </ul>
-        <!-- CART  -->
+        <!-- Cart  -->
         <div
           id="cartNav"
-          class="bg-blue-700 fixed top-0 -right-[400px] w-[400px] h-screen cursor-default transition-all duration-300 delay-150 z-10"
+          class="bg-blue-700 fixed top-0 -right-[400px] w-[400px] min-h-96: h-full cursor-default transition-all duration-300 delay-150 z-10 overflow-auto"
         >
           <div class="text-center text-white m-2 relative border-b-2">
             <div class="font-extrabold text-3xl">Cart</div>
@@ -64,16 +64,18 @@
               <i class="fa-solid fa-xmark"></i>
             </button>
           </div>
-          <div id="cartItems">
+          <div id="cartItems" class="mb-[50%]">
            
+
           </div>
+          
           <div
-            class="grid grid-rows-2 text-white text-3xl font-bold absolute bottom-0 p-4 border-t-2"
+            class="flex flex-col text-black text-3xl font-bold fixed mb-1 bg-white bottom-0 rounded-xl p-4 border-l-4 border-blue-700 "
           >
             <span>Total: </span>
-            <span id="total">0 $</span>
+            <span id="cartTotal"></span>
             <button
-              class="row-span-2 border-2 p-3 rounded-3xl hover:bg-white hover:text-blue-700 hover:scale-110 transition-all duration-500 ease-[cubic-bezier(.05,.86,.75,.13)]"
+              class=" border-2 m-2 p-1 rounded-xl border-black hover:bg-black hover:text-white hover:scale-110 transition-all duration-500 ease-[cubic-bezier(.05,.86,.75,.13)]"
             >
               Check Out
             </button>
@@ -88,14 +90,14 @@
             <a href="index.html">Home</a>
           </li>
           <li
-            class="m-2 p-2 text-xl hover:text-blue-700 hover:scale-110 transition ease-in-out delay-150"
+            class="m-2 p-2 text-xl text-blue-700 scale-110 transition ease-in-out delay-150"
           >
             <a href="store.html">Store</a>
           </li>
           <li
             class="m-2 p-2 text-xl hover:text-blue-700 hover:scale-110 transition ease-in-out delay-150"
           >
-            <a href="contact.html">Contact Us</a>
+            <a href="#">Contact Us</a>
           </li>
         </ul>
       </nav>
@@ -112,52 +114,52 @@
       </div>
     </main>
     <footer
-      class="bg-blue-500 mt-4 text-white text-center p-6 grid grid-cols-4"
-    >
-      <div class="cursor-default">
-        <span class="font-extrabold text-3xl">About Us</span>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-          asperiores consequatur ab voluptate, odio et, possimus, nihil
-          voluptates illum corrupti cumque dignissimos eum hic? Doloremque
-          aliquid iste sed.
-        </p>
-      </div>
-      <div class="grid mx-4">
-        <ul>
-          <li>
-            <span class="text-2xl font-bold cursor-default">ZIRAX</span>
-          </li>
-          <li class="hover:scale-110 transition duration-150 delay-150">
-            <a href="index.html">Home</a>
-          </li>
-          <li class="hover:scale-110 transition duration-150 delay-150">
-            <a href="store.html">Store</a>
-          </li>
-          <li class="hover:scale-110 transition duration-150 delay-150">
-            <a href="contact.html">Contact Us</a>
-          </li>
-        </ul>
-      </div>
-      <div class="col-span-2 cursor-default">
-        <span class="font-bold text-2xl row-span-1">Payment Gateways</span>
-        <div class="flex justify-center items-center">
-          <div class="w-16">
-            <img src="img/visa.png" alt="" />
-          </div>
-          <div class="w-16">
-            <img src="img/paypal.png" alt="" />
-          </div>
-          <div class="w-16">
-            <img src="img/mastercard.jpg" alt="" />
-          </div>
+    class="bg-blue-500 mt-4 text-white text-center p-6 grid grid-cols-4"
+  >
+    <div class="cursor-default">
+      <span class="font-extrabold text-3xl mb-2">About Us</span>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
+        asperiores consequatur ab voluptate, odio et, possimus, nihil
+        voluptates illum corrupti cumque dignissimos eum hic? Doloremque
+        aliquid iste sed.
+      </p>
+    </div>
+    <div class="grid mx-4">
+      <ul>
+        <li>
+          <span class="text-2xl font-bold cursor-default">ZIRAX</span>
+        </li>
+        <li class="hover:scale-110 transition duration-150 delay-150">
+          <a href="index.html">Home</a>
+        </li>
+        <li class="scale-110 underline transition duration-150 delay-150">
+          <a href="store.html">Store</a>
+        </li>
+        <li class="hover:scale-110 transition duration-150 delay-150">
+          <a href="contact.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-span-2 cursor-default">
+      <span class="font-bold text-2xl row-span-1">Payment Gateways</span>
+      <div class="flex justify-center items-center border-l-2 border-white">
+        <div class="w-16">
+          <img src="./img/Logos/visa.webp" alt="visa logo" />
+        </div>
+        <div class="w-16">
+          <img src="./img/Logos/paypal.webp" alt="paypal logo" />
+        </div>
+        <div class="w-16">
+          <img src="./img/Logos/mastercard.webp" alt="master card logo" />
         </div>
       </div>
+    </div>
 
-      <div class="font-bold col-span-4 border-t-2 pt-4 cursor-default">
-        <p>&copy; 2024 Zirax | All Rights Reserved</p>
-      </div>
-    </footer>
+    <div class="font-bold col-span-4 border-t-2 pt-4 cursor-default">
+      <p>&copy; 2024 Zirax | All Rights Reserved</p>
+    </div>
+  </footer>
     <script src="product.js"></script>
     <script src="script.js"></script>
     <script>
@@ -165,9 +167,9 @@
   var { id, image, rank, brand, title, price } = item;
 
   document.getElementById("root").innerHTML += `
-      <div class="rounded-3xl p-4 bg-blue-500 cursor-default transition-all delay-150 duration-300 shadow-2xl hover:shadow-none">
+      <div class="rounded-3xl p-4 bg-blue-500 cursor-default transition-all duration-300 delay-150 shadow-2xl hover:shadow-none">
         <div class="overflow-hidden rounded-3xl">
-          <img src="${image}" alt="" />
+          <img style="height:300px; width:300px;" src="${image}" alt="" />
         </div>
         <br><br>
         <div class="grid grid-cols-1 relative z-0">
@@ -180,8 +182,8 @@
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
           </div>
-          <span class="font-bold">${price}</span>
-          <button onclick='addToCart(${id})' class="absolute right-0 text-2xl bottom-0 border-2 text-white rounded-full border-white p-2 hover:text-blue-500 hover:bg-white transition-all duration-300 delay-150 cursor-pointer">
+          <span class="font-bold">$${price}</span>
+          <button onclick='addToCart(${id})' class="absolute right-0 text-2xl bottom-0 border-2 text-white rounded-full border-white px-3 py-2 hover:text-blue-500 hover:bg-white transition-all duration-200 cursor-pointer">
             <i class="fa-solid fa-cart-plus"></i>
           </button>
         </div>

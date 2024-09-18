@@ -15,7 +15,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     />
-    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="icon" type="image/webp" href="img/Logos/favicon.webp" />
     <style>
       .carousel {
         display: flex;
@@ -31,7 +31,7 @@
     <header>
       <nav class="border-b-2 flex justify-between items-center relative z-10">
         <div class="">
-          <img class="p-2 w-36 cursor-pointer" src="img/logo.png" alt="" />
+          <img class="p-2 w-36 cursor-pointer" src="./img/Logos/logo.webp" alt="Zirax LOGO" />
         </div>
         <ul class="flex items-center">
           <li
@@ -63,7 +63,7 @@
         <!-- Cart  -->
         <div
           id="cartNav"
-          class="bg-blue-700 fixed top-0 -right-[400px] w-[400px] h-screen cursor-default transition-all duration-300 delay-150 z-10"
+          class="bg-blue-700 fixed top-0 -right-[400px] w-[400px] min-h-96: h-full cursor-default transition-all duration-300 delay-150 z-10 overflow-auto"
         >
           <div class="text-center text-white m-2 relative border-b-2">
             <div class="font-extrabold text-3xl">Cart</div>
@@ -74,18 +74,18 @@
               <i class="fa-solid fa-xmark"></i>
             </button>
           </div>
-          <div id="cartItems">
+          <div id="cartItems" class="mb-[50%]">
            
 
           </div>
           
           <div
-            class="grid grid-rows-2 text-white text-3xl font-bold absolute bottom-0 p-4 border-t-2"
+            class="flex flex-col text-black text-3xl font-bold fixed mb-1 bg-white bottom-0 rounded-xl p-4 border-l-4 border-blue-700 "
           >
             <span>Total: </span>
-            <span id="cartTotal"></span>
+            <span id="cartTotal">$0.00</span>
             <button
-              class="row-span-2 border-2 p-3 rounded-3xl hover:bg-white hover:text-blue-700 hover:scale-110 transition-all duration-500 ease-[cubic-bezier(.05,.86,.75,.13)]"
+              class=" border-2 m-2 p-1 rounded-xl border-black hover:bg-black hover:text-white hover:scale-110 transition-all duration-500 ease-[cubic-bezier(.05,.86,.75,.13)]"
             >
               Check Out
             </button>
@@ -95,7 +95,7 @@
       <nav class="border-b-2">
         <ul class="flex items-center">
           <li
-            class="m-2 p-2 text-xl hover:text-blue-700 hover:scale-110 transition ease-in-out delay-150"
+            class="m-2 p-2 text-xl scale-110 text-blue-700 transition ease-in-out delay-150"
           >
             <a href="index.html">Home</a>
           </li>
@@ -124,37 +124,51 @@
         <div id="carousel" class="carousel min-h-full">
           <div class="carousel-item h-screen overflow-visible">
             <img
-              src="img/png 7.png"
+              src="./img/Carousal/1.webp"
               class="mx-auto w-[800px] h-[600px] object-contain my-24"
-              alt="Image 1"
+              alt="Carousal Image 1"
             />
           </div>
           <div class="carousel-item h-screen overflow-visible">
             <img
-              src="img/png 10.png"
+              src="./img/Carousal/2.webp"
               class="mx-auto w-[800px] h-[500px] object-contain my-24"
-              alt="Image 2"
+              alt="Carousal Image 2"
             />
           </div>
           <div class="carousel-item h-screen overflow-visible">
             <img
-              src="img/png 5.png"
+              src="./img/Carousal/3.webp"
               class="mx-auto w-[800px] h-[500px] object-contain my-24"
-              alt="Image 3"
+              alt="Carousal Image 3"
             />
           </div>
           <div class="carousel-item h-screen overflow-visible">
             <img
-              src="img/png 11.png"
+              src="./img/Carousal/4.webp"
               class="mx-auto w-[800px] h-[500px] object-contain my-24"
-              alt="Image 3"
+              alt="Carousal Image 4"
             />
           </div>
           <div class="carousel-item h-screen overflow-visible">
             <img
-              src="img/png 3.png"
+              src="./img/Carousal/5.webp"
               class="mx-auto w-[800px] h-[500px] object-contain my-24"
-              alt="Image 3"
+              alt="Carousal Image 5"
+            />
+          </div>
+          <div class="carousel-item h-screen overflow-visible">
+            <img
+              src="./img/Carousal/6.webp"
+              class="mx-auto w-[800px] h-[500px] object-contain my-24"
+              alt="Carousal Image 6"
+            />
+          </div>
+          <div class="carousel-item h-screen overflow-visible">
+            <img
+              src="./img/Carousal/7.webp"
+              class="mx-auto w-[800px] h-[500px] object-contain my-24"
+              alt="Carousal Image 7"
             />
           </div>
         </div>
@@ -162,7 +176,7 @@
 
       <section class="grid grid-cols-4 gap-3 m-3">
         <div
-          class="p-8 flex justify-center items-center flex-col transition duration-300 delay-150 shadow-xl hover:shadow-none cursor-default"
+          class="p-8 flex justify-center items-center flex-col transition duration-200 delay-150 shadow-xl hover:shadow-none cursor-default"
         >
           <div
             class="text-blue-700 rounded-full border-4 px-3 py-2 border-blue-700"
@@ -173,7 +187,7 @@
           ><span class="font-semibold">On purchase over $50</span>
         </div>
         <div
-          class="p-8 flex justify-center items-center flex-col transition duration-300 delay-150 shadow-xl hover:shadow-none cursor-default"
+          class="p-8 flex justify-center items-center flex-col transition duration-200 delay-150 shadow-xl hover:shadow-none cursor-default"
         >
           <div
             class="text-blue-700 rounded-full border-4 px-3 py-2 border-blue-700"
@@ -184,7 +198,7 @@
           ><span class="font-semibold">30 Days Back Guaranty</span>
         </div>
         <div
-          class="p-8 flex justify-center items-center flex-col transition duration-300 delay-150 shadow-xl hover:shadow-none cursor-default"
+          class="p-8 flex justify-center items-center flex-col transition duration-200 delay-150 shadow-xl hover:shadow-none cursor-default"
         >
           <div
             class="text-blue-700 rounded-full border-4 px-3 py-2 border-blue-700"
@@ -195,7 +209,7 @@
           ><span class="font-semibold">24/7 Technical Support</span>
         </div>
         <div
-          class="p-8 flex justify-center items-center flex-col transition duration-300 delay-150 shadow-xl hover:shadow-none cursor-default"
+          class="p-8 flex justify-center items-center flex-col transition duration-200 delay-150 shadow-xl hover:shadow-none cursor-default"
         >
           <div
             class="text-blue-700 rounded-full border-4 px-3 py-2 border-blue-700"
@@ -214,23 +228,23 @@
         </div>
         <div id="featured" class="grid grid-cols-4 gap-4 text-white"></div>
       </section>
-      <section class="grid grid-cols-2 grid-rows-3 gap-4 mx-4">
+      <section class="grid grid-cols-2 grid-rows-3 gap-4 m-36">
         <div
           class="border-2 rounded-3xl p-20 cursor-default col-span-2 row-span-1"
           style="
-            background-image: url(./img/jpg\ 1.jpg);
+            background-image: url(./img/BGimgs/1.webp);
             background-repeat: no-repeat;
             background-size: cover;
           "
         >
-          <div class="grid grid-cols-1">
-            <span class="font-bold text-2xl text-white">Splash resistant</span>
-            <span class="font-semibold text-3xl text-blue-700"
-              >Best Kicks for Kids</span
+          <div class="grid grid-cols-1 text-white">
+            <span class="font-bold text-2xl">Sports Shoes</span>
+            <span class="font-semibold text-3xl"
+              >Step Into Performance</span
             >
           </div>
           <button
-            class="bg-blue-700 p-4 rounded-3xl font-semibold text-white hover:bg-white hover:text-blue-700 transition-all duration-300 delay-150"
+            class="bg-blue-700 m-1 p-4 rounded-3xl font-semibold text-white hover:bg-white hover:text-blue-700 transition-all duration-300 delay-150"
           >
             Shop by Category
           </button>
@@ -238,19 +252,19 @@
         <div
           class="border-2 rounded-3xl p-20 cursor-default col-span-1 row-span-1 text-center"
           style="
-            background-image: url(./img/jpg\ 7.jpg);
+            background-image: url(./img/BGimgs/2.webp);
             background-repeat: no-repeat;
             background-size: cover;
           "
         >
-          <div class="grid grid-cols-1">
-            <span class="font-bold text-2xl text-white">Splash resistant</span>
-            <span class="font-semibold text-3xl text-blue-700"
+          <div class="grid grid-cols-1 text-white">
+            <span class="font-bold text-2xl ">Splash resistant</span>
+            <span class="font-semibold text-3xl "
               >Best Kicks for Kids</span
             >
           </div>
           <button
-            class="bg-blue-700 p-4 rounded-3xl font-semibold text-white hover:bg-white hover:text-blue-700 transition-all duration-300 delay-150"
+            class="bg-blue-700 p-4 m-1 rounded-3xl font-semibold text-white hover:bg-white hover:text-blue-700 transition-all duration-300 delay-150"
           >
             Shop by Category
           </button>
@@ -258,19 +272,19 @@
         <div
           class="border-2 rounded-3xl p-20 cursor-default col-span-1 row-span-1 text-center"
           style="
-            background-image: url(./img/jpg\ 9.jpg);
+            background-image: url(./img/BGimgs/3.webp);
             background-repeat: no-repeat;
             background-size: cover;
           "
         >
-          <div class="grid grid-cols-1">
-            <span class="font-bold text-2xl text-white">Splash resistant</span>
-            <span class="font-semibold text-3xl text-blue-700"
-              >Best Kicks for Kids</span
+          <div class="grid grid-cols-1 text-white">
+            <span class="font-bold text-2xl">Running Shoes</span>
+            <span class="font-semibold text-3xl"
+              >Run Faster, Run Freer</span
             >
           </div>
           <button
-            class="bg-blue-700 p-4 rounded-3xl font-semibold text-white hover:bg-white hover:text-blue-700 transition-all duration-300 delay-150"
+            class="bg-blue-700 p-4 m-1 rounded-3xl font-semibold text-white hover:bg-white hover:text-blue-700 transition-all duration-300 delay-150"
           >
             Shop by Category
           </button>
@@ -278,19 +292,19 @@
         <div
           class="border-2 rounded-3xl p-20 cursor-default col-span-2"
           style="
-            background-image: url(./img/jpg\ 5.jpg);
+            background-image: url(./img/BGimgs/5.webp);
             background-repeat: no-repeat;
             background-size: cover;
           "
         >
-          <div class="grid grid-cols-1">
-            <span class="font-bold text-2xl text-white">Splash resistant</span>
-            <span class="font-semibold text-3xl text-blue-700"
-              >Best Kicks for Kids</span
+          <div class="grid grid-cols-1 text-white">
+            <span class="font-bold text-2xl">Joggers</span>
+            <span class="font-semibold text-3xl "
+              >Jog Your Way into The Future</span
             >
           </div>
           <button
-            class="bg-blue-700 p-4 rounded-3xl font-semibold text-white hover:bg-white hover:text-blue-700 transition-all duration-300 delay-150"
+            class="bg-blue-700 p-4 m-1 rounded-3xl font-semibold text-white hover:bg-white hover:text-blue-700 transition-all duration-300 delay-150"
           >
             Shop by Category
           </button>
@@ -309,7 +323,7 @@
           class="flex justify-center items-center flex-col text-center p-4 bg-blue-500 text-white rounded-2xl cursor-default"
         >
           <div class="w-16 overflow-hidden border-2 rounded-full">
-            <img class="object-contain" src="img/png 1.png" alt="" />
+            <img class="object-contain" src="./img/Brands/Adidas/Ultraboost 5X.webp" alt="product img" />
           </div>
           <br />
 
@@ -322,10 +336,10 @@
           <br />
           <br />
           <div class="w-16 overflow-hidden border-2 rounded-full">
-            <img class="object-contain" src="img/profile 1.png" alt="" />
+            <img class="object-contain" src="./img/Logos/profile 1.webp" alt="profile img" />
           </div>
           <span class="font-semibold">Haris Mansoor</span>
-          <span>Position</span>
+          <span>Front-End Developer</span>
           <div class="text-yellow-400">
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
@@ -337,8 +351,8 @@
         <div
           class="flex justify-center items-center flex-col text-center p-4 bg-blue-500 text-white rounded-2xl cursor-default"
         >
-          <div class="w-16 overflow-hidden border-2 rounded-full">
-            <img class="object-contain" src="img/png 1.png" alt="" />
+          <div class="w-16 overflow-hidden border-2   rounded-full">
+            <img class="object-contain" src="./img/Brands/Nike/Luka 3 Speedway.webp" alt="product img" />
           </div>
           <br />
 
@@ -351,10 +365,10 @@
           <br />
           <br />
           <div class="w-16 overflow-hidden border-2 rounded-full">
-            <img class="object-contain" src="img/profile 2.png" alt="" />
+            <img class="object-contain" src="./img/Logos/profile 2.webp" alt="profile img" />
           </div>
-          <span class="font-semibold">Haris Mansoor</span>
-          <span>Position</span>
+          <span class="font-semibold">Imran Khan</span>
+          <span>Ex Prime Minister of Pakistan</span>
           <div class="text-yellow-400">
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
@@ -367,7 +381,7 @@
           class="flex justify-center items-center flex-col text-center p-4 bg-blue-500 text-white rounded-2xl cursor-default"
         >
           <div class="w-16 overflow-hidden border-2 rounded-full">
-            <img class="object-contain" src="img/png 1.png" alt="" />
+            <img class="object-contain" src="./img/Brands/Adidas/Lite Racer Adapt 6.0.webp" alt="product img" />
           </div>
           <br />
 
@@ -380,10 +394,10 @@
           <br />
           <br />
           <div class="w-16 overflow-hidden border-2 rounded-full">
-            <img class="object-contain" src="img/profile 3.png" alt="" />
+            <img class="object-contain" src="./img/Logos/profile 3.webp" alt="profile img" />
           </div>
-          <span class="font-semibold">Haris Mansoor</span>
-          <span>Position</span>
+          <span class="font-semibold">Mansoor Ahmed</span>
+          <span>Army Officer</span>
           <div class="text-yellow-400">
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
@@ -397,7 +411,7 @@
     <footer
       class="bg-blue-500 mt-4 text-white text-center p-6 grid grid-cols-4"
     >
-      <div class="cursor-default">
+      <div class="cursor-default mb-2">
         <span class="font-extrabold text-3xl">About Us</span>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
@@ -411,7 +425,7 @@
           <li>
             <span class="text-2xl font-bold cursor-default">ZIRAX</span>
           </li>
-          <li class="hover:scale-110 transition duration-150 delay-150">
+          <li class="scale-110 underline transition duration-150 delay-150">
             <a href="index.html">Home</a>
           </li>
           <li class="hover:scale-110 transition duration-150 delay-150">
@@ -426,13 +440,13 @@
         <span class="font-bold text-2xl row-span-1">Payment Gateways</span>
         <div class="flex justify-center items-center border-l-2 border-white">
           <div class="w-16">
-            <img src="img/visa.png" alt="" />
+            <img src="./img/Logos/visa.webp" alt="visa logo" />
           </div>
           <div class="w-16">
-            <img src="img/paypal.png" alt="" />
+            <img src="./img/Logos/paypal.webp" alt="paypal logo" />
           </div>
           <div class="w-16">
-            <img src="img/mastercard.jpg" alt="" />
+            <img src="./img/Logos/mastercard.webp" alt="master card logo" />
           </div>
         </div>
       </div>
@@ -475,9 +489,9 @@
   // Handle 'feature' rank
   if (rank === "feature") {
     document.getElementById("featured").innerHTML += `
-      <div class="rounded-3xl p-4 bg-blue-500 cursor-default transition-all delay-150 duration-300 shadow-2xl hover:shadow-none">
+      <div class="rounded-3xl p-4 bg-blue-500 cursor-default transition-all duration-300 delay-150 shadow-2xl hover:shadow-none">
         <div class="overflow-hidden rounded-3xl">
-          <img src="${image}" alt="" />
+          <img style="height:300px; width:300px;" src="${image}" alt="" />
         </div>
         <br><br>
         <div class="grid grid-cols-1 relative z-0">
@@ -490,8 +504,8 @@
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
           </div>
-          <span class="font-bold">${price}</span>
-          <button onclick="addToCart(${id})" class="absolute right-0 text-2xl bottom-0 border-2 text-white rounded-full border-white p-2 hover:text-blue-500 hover:bg-white transition-all duration-300 delay-150 cursor-pointer">
+          <span class="font-bold">$${price}</span>
+          <button onclick="addToCart(${id})" class="absolute right-0 text-2xl bottom-0 border-2 text-white rounded-full border-white px-3 py-2 hover:text-blue-500 hover:bg-white transition-all duration-200 cursor-pointer">
             <i class="fa-solid fa-cart-plus"></i>
           </button>
         </div>
@@ -501,9 +515,9 @@
   // Handle 'new' rank
   else if (rank === "new") {
     document.getElementById("newArrivals").innerHTML += `
-      <div class="rounded-3xl p-4 bg-blue-500 cursor-default transition-all delay-150 duration-300 shadow-2xl hover:shadow-none">
+      <div class="rounded-3xl p-4 bg-blue-500 cursor-default transition-all duration-300 delay-150 shadow-2xl hover:shadow-none">
         <div class="overflow-hidden rounded-3xl">
-          <img src="${image}" alt="" />
+          <img style="height:300px; width:300px;" src="${image}" alt="" />
         </div>
         <br><br>
         <div class="grid grid-cols-1 relative z-0">
@@ -516,8 +530,8 @@
             <i class="fa-solid fa-star"></i>
             <i class="fa-solid fa-star"></i>
           </div>
-          <span class="font-bold">${price}</span>
-          <button onclick="addToCart(${id})" class="absolute right-0 text-2xl bottom-0 border-2 text-white rounded-full border-white p-2 hover:text-blue-500 hover:bg-white transition-all duration-300 delay-150 cursor-pointer">
+          <span class="font-bold">$${price}</span>
+          <button onclick="addToCart(${id})" class="absolute right-0 text-2xl bottom-0 border-2 text-white rounded-full border-white px-3 py-2 hover:text-blue-500 hover:bg-white transition-all duration-200 cursor-pointer">
             <i class="fa-solid fa-cart-plus"></i>
           </button>
         </div>
