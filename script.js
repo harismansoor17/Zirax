@@ -34,7 +34,7 @@ function addToCart(productId) {
       <div class="w-full text-black bg-white border-blue-700 border-b-2 border-l-2 relative flex justify-evenly items-center" id="cart-item-${productId}">
         <button
           onclick="removeFromCart(${productId})"
-          class="absolute top-0 right-0 m-2 text-3xl hover:scale-110 transition-all duration-300 delay-150"
+          class="absolute top-0 right-0 m-2 text-xl hover:scale-110 transition-all duration-300 delay-150"
         >
           <i class="fa-regular fa-rectangle-xmark"></i>
         </button>
@@ -43,7 +43,7 @@ function addToCart(productId) {
         <img style="height:100px; width:100px; border-radius:12px; margin:1rem;" src="${image}" alt="${productId} Product Image" />
         </div>
         <div class=" flex flex-col justify-center">
-        <span class="text-xl font-bold">${title}</span>
+        <span class="text-md font-bold">${title}</span>
         <input style="color:white; background-color:#1d4ed8; font-size:12px; outline:none; border-radius:12px; width:50px; padding:4px;" sty id="quantity-${productId}" type="number" value="1" min="1" onchange="updateQuantity(${productId}, this.value)">
         <span class="text-xl font-semibold">price: <span class="price">${price}$</span></span>
         </div>
