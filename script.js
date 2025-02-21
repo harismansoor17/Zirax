@@ -6,7 +6,7 @@ function showCart() {
 }
 
 function hideCart() {
-  cartNav.style.right = "-400px";
+  cartNav.style.right = "-700px";
 }
 
 let cart = []; 

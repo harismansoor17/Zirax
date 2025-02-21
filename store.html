@@ -29,7 +29,7 @@
         </div>
         <ul class="flex items-center">
           <li
-            class="m-2 p-2 text-lg hover:text-blue-500 hover:scale-110 transition ease-in-out "
+            class="m-2 p-2 text-lg hover:text-blue-500 hover:scale-110 transition ease-in-out md:hidden"
           >
             <a href="#"
               ><i class="fa-solid fa-user"></i
@@ -37,7 +37,7 @@
             >
           </li>
           <li
-            class="m-2 p-2 text-lg hover:text-blue-700 hover:scale-110 transition ease-in-out "
+            class="m-2 p-2 text-lg hover:text-blue-700 hover:scale-110 transition ease-in-out md:hidden"
           >
             <a href="#">Sign Up</a>
           </li>
@@ -122,9 +122,9 @@
     <footer
       class="bg-blue-500"
     >
-    <div class="mt-4 text-white text-center p-6 grid grid-cols-4 max-w-[1600px] mx-auto">
+    <div class="overflow-hidden mt-4 text-white text-center p-6 grid grid-cols-4 max-w-[1600px] mx-auto lg:grid-cols-1 lg:grid-rows-3 ">
 
-      <div class="cursor-default mb-2" >
+      <div class="cursor-default mb-2 lg:col-span-1 lg:row-span-1 justify-self-center self-center" >
         <span class="font-extrabold text-3xl">About Us</span>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
@@ -133,15 +133,15 @@
           aliquid iste sed.
         </p>
       </div>
-      <div class="grid mx-4">
-        <ul>
+      <div class="grid mx-4 lg:col-span-1 h-[150px] justify-self-center self-center">
+        <ul >
           <li>
             <span class="text-2xl font-bold cursor-default">ZIRAX</span>
           </li>
-          <li class="hover:scale-110 transition duration-150 ">
+          <li class="hover:scale-110 transition duration-150">
             <a href="index.html">Home</a>
           </li>
-          <li class="scale-125 ">
+          <li class="scale-125">
             <a href="store.html">Store</a>
           </li>
           <li class="hover:scale-110 transition duration-150 ">
@@ -149,22 +149,22 @@
           </li>
         </ul>
       </div>
-      <div class="col-span-2 cursor-default">
+      <div class="col-span-2 cursor-default lg:col-span-1 lg:row-span-3 lg:border-t-2 lg:border-white justify-self-center self-center">
         <span class="font-bold text-2xl row-span-1">Payment Gateways</span>
-        <div class="flex justify-center items-center border-l-2 border-white">
+        <div class="flex justify-center items-center border-l-2 border-white lg:border-none">
           <div class="w-16">
-            <img src="./img/Logos/visa.webp" alt="visa logo" />
+            <img src="../img/Logos/visa.webp" alt="visa logo" />
           </div>
           <div class="w-16">
-            <img src="./img/Logos/paypal.webp" alt="paypal logo" />
+            <img src="../img/Logos/paypal.webp" alt="paypal logo" />
           </div>
           <div class="w-16">
-            <img src="./img/Logos/mastercard.webp" alt="master card logo" />
+            <img src="../img/Logos/mastercard.webp" alt="master card logo" />
           </div>
         </div>
       </div>
 
-      <div class="font-bold col-span-4 border-t-2 pt-4 cursor-default">
+      <div class="font-bold col-span-4 border-t-2 pt-4 cursor-default lg:col-span-1 lg:row-span-4 justify-self-center self-center">
         <p>&copy; 2024 Zirax | All Rights Reserved</p>
       </div>
     </div>
