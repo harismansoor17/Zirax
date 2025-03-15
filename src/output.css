@@ -582,6 +582,10 @@ video {
   right: -400px;
 }
 
+.-right-\[700px\] {
+  right: -700px;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
@@ -596,10 +600,6 @@ video {
 
 .top-0 {
   top: 0px;
-}
-
-.-right-\[700px\] {
-  right: -700px;
 }
 
 .-z-10 {
@@ -1296,20 +1296,8 @@ video {
 }
 
 @media (max-width: 639px) {
-  .sm\:-right-0 {
-    right: -0px;
-  }
-
-  .sm\:-right-\[700px\] {
-    right: -700px;
-  }
-
   .sm\:w-full {
     width: 100%;
-  }
-
-  .sm\:min-w-full {
-    min-width: 100%;
   }
 
   .sm\:grid-cols-1 {
